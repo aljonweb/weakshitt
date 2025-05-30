@@ -1,0 +1,393 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+  font-family: "Microsoft YaHei","Helvetica Neue",Helvetica,"Lucida Grande","Lucida Sans Unicode",Arial;
+  background-color: #fff;
+  
+}  
+p{
+    font-size: 1.1rem;
+}
+
+header {
+    padding: 20px 0;
+    background: rgb(29, 28, 28);
+}
+
+.logo{
+    padding-left: 20px;
+}
+.logo img{
+    width: 10vw;
+    padding: 5px;
+    
+}
+
+
+.nav-bar ul{
+    display: flex;
+    list-style-type: none;
+    gap: 40px;
+    padding: 30px;
+      
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-bar {
+  align-content: center;
+  
+}    
+    
+.nav-bar a{
+    text-decoration: none;
+    color: #e36f09;
+    font-size: 1.1rem;
+}
+
+.nav-bar a:hover{
+    color: #0ea4ef;
+}
+
+.text-cont{
+   width: 100%;
+   height: 100%;
+   padding: 20px;
+}
+
+.banner{
+    width: 100%;
+    
+}
+.banner img{
+
+    width: 100%;
+    height: 100%;
+    
+    object-fit: cover;
+}
+
+.containers{
+
+    width: 100%;
+  height: 100vh;
+
+  background-image: url(media/bg-cont1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+ background-size: cover;
+
+}
+.container {
+  width: 100%;
+  height: 100%;
+  background-image: url(media/bg-cont1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+ background-size: cover;
+}
+
+.container2 {
+  
+  padding: 20px;
+  display: flex;
+    background-image: url(media/bg-cont2.jpg);
+  
+}
+.cont{
+    width: 100%;
+    padding: 20px;
+    gap: 20px;
+    margin: 30px;
+    background-color: rgb(31, 38, 41);
+    
+   
+}
+.cont h1{
+    font-size: 3.5rem;
+    color: #e36f09;
+    justify-self: center;
+    
+}
+.cont h2{
+    font-size: 1.5rem;
+    color: rgb(41, 44, 48);
+    justify-self: center;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+}
+.cont img{
+    width: 100%;
+    height: 40vh;
+    
+    border-radius: 5px;
+}
+.cont-text{
+    display: flex;
+    width: 100%;
+}
+.card {
+   margin: 20px;
+}
+.card img{
+    width: 100%;
+    height: 20vh;
+    padding: 20px;
+    
+}
+.card h3{
+    color: #b2c7b3;
+   text-align: center;
+}
+.cont-img{
+   
+    width: 100%;
+}
+.cont-img img{
+   
+    object-fit: cover;
+    object-position: top;
+    opacity: 30%;
+    transition: .3s;
+}
+
+.cont-img img:hover{
+   
+    opacity: 100%;
+    transition: .3s;
+}
+.contact-form {
+    width: 100%;
+    padding: 20px 40px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.form-row label {
+    color: #fbfbfb;
+    font-weight: 800;
+}
+
+.form-row input,.form-row select,.form-row textarea {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    background-color: #fff;
+    font-size: 14px;
+}
+
+.form-row input::placeholder,
+.form-row textarea::placeholder {
+    color: #999;
+}
+
+.form-row textarea {
+    height: 120px;
+    resize: none;
+}
+
+.form-row:last-child {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+button[type="submit"] {
+    background: #4CAF50;
+    color: white;
+    padding: 8px 25px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+
+
+.footer{
+    background-image: url(media/footer.png);
+    background-position: center;
+  background-repeat: no-repeat;
+ background-size: cover;
+ width: 100%;
+ height: 10vh;
+ 
+  
+}
+.contain{
+    
+    font-size: 14px;
+    color: #ffffff;
+    align-content: center;
+    height: 100%;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.contact-form {
+    width: 100%;
+    padding: 20px;
+    background: #1d9ee9;
+    border-radius: 5px;
+    height: 100vh;
+}
+
+.form-row {
+   
+    display: flex;
+    gap: 200px;
+}
+
+.form-row label {
+    width: 150px;
+    padding-right: 20px;
+    line-height: 40px;
+}
+
+.form-row input,
+.form-row select,
+.form-row textarea {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.form-row textarea {
+    height: 150px;
+    
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    font-size: 14px;
+    border-radius: 4px;
+    justify-self: flex-end;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+
+@media screen and (max-width: 768px) {
+    
+    header {
+        padding: 10px;
+
+    }
+
+    nav {
+        flex-direction: column;
+        height: auto;
+    }
+    .logo{
+        width: 30%;
+    }
+    .logo img {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .nav-bar {
+        width: 100%;
+    }
+
+    .nav-bar ul {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+        text-align: center;
+    }
+    .nav-bar a{
+       padding-left: 30%;
+       padding-right: 30%;
+    }
+    li{
+        border-bottom: 1px solid;
+         color: #e36f09;
+         
+    }
+    
+    .banner img {
+        height: 40vh;
+        object-fit: cover;
+    }
+
+   
+    .text-cont {
+        padding: 15px;
+    }
+
+    .text-cont h1 {
+        font-size: 24px;
+    }
+
+    .text-cont p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    
+    .container2 {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .cont {
+        width: 100%;
+        height: auto;
+        min-height: 200px;
+        margin: 15px auto;
+    }
+
+    
+    .contact-form {
+        padding: 15px;
+        height: 155vh;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        display: block;
+    }
+
+    .form-row label {
+        margin-bottom: 5px;
+    }
+    .containers{
+        width: 100%;
+        height: 155vh;
+    }
+    
+    button{
+        width: 100%;
+    }
+    .contain p{
+    
+    font-size: 14px;
+    }
+}
+
+
