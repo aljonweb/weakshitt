@@ -163,22 +163,37 @@ nav {
     opacity: 100%;
     transition: .3s;
 }
+
+
+
 .contact-form {
     width: 100%;
     padding: 20px 40px;
+    padding: 20px;
+    background: #1d9ee9;
+    border-radius: 5px;
+    height: 100vh;
 }
+
 
 .form-row {
     display: grid;
     grid-template-columns: 120px 1fr;
     margin-bottom: 15px;
     align-items: center;
+     display: flex;
+    gap: 200px;
 }
 
 .form-row label {
     color: #fbfbfb;
     font-weight: 800;
+    width: 150px;
+    padding-right: 20px;
+    line-height: 40px;
 }
+
+
 
 .form-row input,.form-row select,.form-row textarea {
     width: 100%;
@@ -188,16 +203,26 @@ nav {
     background-color: #fff;
     font-size: 14px;
 }
+.form-row input,
+.form-row select,
+.form-row textarea {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
 
 .form-row input::placeholder,
-.form-row textarea::placeholder {
-    color: #999;
+.form-row textarea::placeholder{
+    color: #365d6c;
 }
 
 .form-row textarea {
-    height: 120px;
+    height: 150px;
     resize: none;
 }
+
 
 .form-row:last-child {
     display: flex;
@@ -206,8 +231,8 @@ nav {
 }
 
 button[type="submit"] {
-    background: #4CAF50;
-    color: white;
+    background: #f8ff1f;
+    color: #365d6c;
     padding: 8px 25px;
     border: none;
     border-radius: 3px;
@@ -215,7 +240,10 @@ button[type="submit"] {
     font-size: 14px;
 }
 
-
+button:hover {
+    background-color: #bbcad7;
+    color: #000;
+}
 
 .footer{
     background-image: url(media/footer.png);
@@ -229,7 +257,7 @@ button[type="submit"] {
 }
 .contain{
     
-    font-size: 14px;
+    
     color: #ffffff;
     align-content: center;
     height: 100%;
@@ -238,54 +266,10 @@ button[type="submit"] {
 }
 
 
-.contact-form {
-    width: 100%;
-    padding: 20px;
-    background: #1d9ee9;
-    border-radius: 5px;
-    height: 100vh;
-}
 
-.form-row {
-   
-    display: flex;
-    gap: 200px;
-}
 
-.form-row label {
-    width: 150px;
-    padding-right: 20px;
-    line-height: 40px;
-}
 
-.form-row input,
-.form-row select,
-.form-row textarea {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 14px;
-}
 
-.form-row textarea {
-    height: 150px;
-    
-}
-
-button {
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    font-size: 14px;
-    border-radius: 4px;
-    justify-self: flex-end;
-}
-
-button:hover {
-    background-color: #45a049;
-}
 
 
 @media screen and (max-width: 768px) {
