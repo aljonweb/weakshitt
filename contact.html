@@ -4,8 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,
-400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="shortcut icon" href="media/icon.png">
 </head>
@@ -24,64 +22,81 @@
       </div>
     </nav>
   </header>
+
    <main>
         <div class="banner">
-          <img src="media/banner.png" alt="">
+          <img src="media/banneres.png" alt="">
         </div>
-    </main>
+      </main>
 
   <section class="containers">
     <div class="containeres">
-    <form class="contact-form">
+    <form class="contact-form" onsubmit="return Submit(event)">
       <div class="form-row">
         <label>First Name</label>
-        <input type="text" placeholder="Your Name">
+        <input type="text" id="firstname" placeholder="Your First Name" >
       </div>
       <div class="form-row">
         <label>Last Name</label>
-        <input type="text" placeholder="Your Last Name">
+        <input type="text" id="lastname" placeholder="Your Last Name" >
       </div>
       <div class="form-row">
         <label>Telephone No.</label>
-        <input type="text" placeholder="Valid formats: (123) 456-7890, (123)456-7890, 123-456-7890, 123.456.7890">
+        <input type="text" id="telephone" placeholder="Valid formats: (123) 456-7890, (123)456-7890, 123-456-7890, 123.456.7890" >
       </div>
       <div class="form-row">
         <label>E-mail:</label>
-        <input type="email" placeholder="sample@host.com">
+        <input type="email" id="email" placeholder="sample@host.com" >
       </div>
       <div class="form-row">
         <label>Organization</label>
-        <input type="text">
+        <input type="text" id="organization">
       </div>
       <div class="form-row">
         <label>Province</label>
-        <select>
+        <select id="province">
           <option>Select your Province</option>
+          <option value="Davao Del Norte">Davao Del Norte</option>
+          <option value="Davao Del Sur">Davao Del Sur</option>
+          <option value="Davao De Oro">Davao De Oro</option>
+         
         </select>
       </div>
       <div class="form-row">
         <label>City/Town</label>
-        <select>
+        <select id="city">
           <option>Select your Municipality or City</option>
+          <option value="Tagum City">Tagum City</option>
+          <option value="Panabo City">Panabo City</option>
+          <option value="Davao City">Davao City</option>
+          
         </select>
       </div>
       <div class="form-row">
         <label>Barangay</label>
-        <select>
+        <select id="barangay">
           <option>Select your Barangay</option>
+          <option value="Mankilam">Mankilam</option>
+          <option value="Visayan Village">Visayan Village</option>
+          <option value="Apokon">Apokon</option>
+          
         </select>
       </div>
       <div class="form-row">
-        <label>Street</label>
-        <input type="text">
+        <label for="strt">Street</label>
+        <input type="text" id="street">
       </div>
       <div class="form-row">
         <label>Message</label>
-        <textarea placeholder="write something...."></textarea>
+        <textarea id="message" placeholder="write something...."></textarea>
         
       </div>
       <div class="form-row">
-        <button type="submit">Submit</button>
+        <div class="btn">
+      <button type="submit">Submit</button> 
+
+        </div>
+      
       </div>
     </form>
     
@@ -96,6 +111,77 @@
     </div>
     </div>
   </footer>
+
+
+
+  <script>
+
+   function Submit(event) {
+    event.preventDefault();
+
+
+
+
+    let firstname = document.getElementById("firstname").value
+    let lastname = document.getElementById("lastname").value
+    let telephone = document.getElementById("telephone").value
+    let email = document.getElementById("email").value
+    let organization = document.getElementById("organization").value
+    let province = document.getElementById("province").value
+    let city = document.getElementById("city").value
+    let barangay = document.getElementById("barangay").value
+    let street = document.getElementById("street").value
+    let message = document.getElementById("message").value
+      
+
+
+    if(firstname == "" || lastname == "" || telephone == "" || email == "" || organization == "" || province == "" || city == "" || barangay == "" || street == "" || message == "" ){
+      
+      alert("All fields must be filled out!")
+      return false;
+
+
+    }
+      else if(firstname.toUpperCase() === lastname.toUpperCase()){
+        alert("The First and Lastname should not be the same!")
+      }
+      
+      else if  (province !== "Davao Del Norte"){
+        alert("Invalid Province Address. Please select Davao Del Norte")
+      }
+      
+      
+      else if (city !== "Tagum City"){
+        alert("Invalid City Address. Please select Tagum City")
+      }
+      
+      else if (barangay !== "Mankilam"){
+        alert("Invalid Barangay Address. Please select Mankilam")
+      }
+
+      else if(isNaN(telephone)){
+        alert("Please input a number in telephone!")
+      }
+      
+      
+      else if(message.length<10){
+        alert("Message length is less than 10!")
+      }
+      
+      else{
+        alert("Well Done!")
+        return false;
+      }
+
+      
+      
+    }
+   
+
+   
+  
+
+  </script>
  
 </body>
 </html>
